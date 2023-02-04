@@ -49,7 +49,7 @@
   
     <div class="card" style="max-width: 18rem;">
         <div class="iconBox">
-            <ion-icon name="thermometer-outline"></ion-icon>
+            <ion-icon name="water"></ion-icon>
             </div><br>
         <div class="data" id="humdata"></div><br>
         <div class="cardName">Humidity</div>
@@ -58,7 +58,7 @@
 
     <div class="card" style="max-width: 18rem;">
         <div class="iconBox">
-            <ion-icon name="thermometer-outline"></ion-icon>
+            <ion-icon name="flash"></ion-icon>
             </div><br>
         <div class="data" id="lightdata"></div><br>
         <div class="cardName">Lights</div>
@@ -66,14 +66,21 @@
     </div>
    
     <div class="chartBox">
-        <div class="chartCard" style="max-width: 18rem;">
+        <div class="chartCard">
             <div class="cardName">CHARTS</div>
-            <div class="imgbox" id = "TemperatureChart"><img src="image.jpg"></div>
-            <div class="imgbox" id = "HumidityChart"><img src="image.jpg"></div>
+            <div class="image__wrapper">
+                <div class="imgbox" id = "TemperatureChart"><img src="image.jpg"></div>
+                <div class="imgbox" id = "HumidityChart"><img src="image.jpg" ></div>
+            </div>
         </div>
     </div>
     <div class="alertBox" >
-        <div class="cardName"> Alerts</div>
+        <ion-icon name="alert-circle"></ion-icon>
+        <div class="cardName"> ALERTS !</div><br>
+        <div class="cardName">Gas detected: </div>
+        <div class="data" id="gasalert"></div><br>
+        <div class="cardName">Flame detected: </div>
+        <div class="data" id="flamealert"></div>
     </div>
     </div>
 
@@ -89,6 +96,8 @@
                 document.getElementById("lightdata").innerText=data.light;
                 document.getElementById("TemperatureChart").innerHTML = "<img src="+data.temp_url.data+">";
                 document.getElementById("HumidityChart").innerHTML = "<img src="+data.hum_url.data+">";
+                document.getElementById("gasalert").innerText=data.gas;
+                document.getElementById("flamealert").innerText=data.flame;
                 }
                 catch(error){
                     console.log(error);
