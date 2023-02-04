@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <title>Home Automation</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="topbar">
         <div class="page-title">Home Automation</div>
     </div>
-    
+
     <div>
         <div class="navigation">
             <ul>
@@ -45,30 +47,105 @@
     </div>
     <div class="cardBox">
         <div class="card" style="max-width: 18rem;">
-           
-           <!-- Rounded switch -->
-        <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
+
+            <!-- Rounded switch -->
+            <label class="switch">
+                <input type="checkbox" id="switchinput1" onclick="switch1func()">
+                <span class="slider round"></span>
+            </label>
             <div class="cardName">Switch 1</div>
         </div>
-        
-  
-        <div class="card" style="max-width: 18rem;">
-           
-            <!-- Rounded switch -->
-         <label class="switch">
-         <input type="checkbox">
-         <span class="slider round"></span>
-         </label>
-             <div class="cardName">Switch 2</div>
-         </div>
-         
 
-         
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   
+
+        <div class="card" style="max-width: 18rem;">
+
+            <!-- Rounded switch -->
+            <label class="switch">
+                <input type="checkbox" id="switchinput2" onclick="switch2func()">
+                <span class="slider round"></span>
+            </label>
+            <div class="cardName">Switch 2</div>
+        </div>
+
+
+        <script>
+
+            const switch1func = async () => {
+                let url = 'https://elegant-colt-hosiery.cyclic.app/control/update';
+                // let url = 'http://localhost:3000/control/update';
+                let checkbox1 = document.getElementById("switchinput1")
+                if (checkbox1.checked === true) {
+                    let res = fetch(url, {
+                        method: 'PUT',
+                        headers: {
+                            "Content-type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            "btnid": 1,
+                            "state": true
+                        }) 
+                    }).then(res => res.json()).then(data => console.log("DATA: ", data)).catch(err => console.log("ERR: ", err))
+                    // let data = res.json();
+                    // console.log(data)
+
+                }
+                if (checkbox1.checked === false) {
+                    let res = await fetch(url, {
+                        method: 'PUT',
+                        headers: {
+                            "Content-type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            "btnid": 1,
+                            "state": false
+                        })
+                    }
+                    ).then(res => res.json()).then(data => console.log("DATA: ", data)).catch(err => console.log("ERR: ", err))
+                    // let data = await res.json();
+                    // console.log(data)
+                }
+
+            }
+
+            const switch2func = async () => {
+                let url = 'https://elegant-colt-hosiery.cyclic.app/control/update';
+                let checkbox2 = document.getElementById("switchinput2")
+                if (checkbox2.checked === true) {
+                    let res = await fetch(url, {
+                        method: 'PUT',
+                        headers: {
+                            "Content-type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            "btnid": 2,
+                            "state": true
+                        }) 
+                    }).then(res => res.json()).then(data => console.log("DATA: ", data)).catch(err => console.log("ERR: ", err))
+                    
+                    // let data = await res.json();
+                    // console.log(data)
+                }
+                if (checkbox2.checked === false) {
+                    let res = await fetch(url, {
+                        method: 'PUT',
+                        headers: {
+                            "Content-type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            "btnid": 2,
+                            "state": false
+                        }) 
+                    }).then(res => res.json()).then(data => console.log("DATA: ", data)).catch(err => console.log("ERR: ", err))
+                    
+                    // let data = await res.json();
+                    // console.log(data)
+                }
+            }
+
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
