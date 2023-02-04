@@ -53,6 +53,7 @@ body.background-image{
     border: 0px solid rgba(130, 128, 128, 0.18);
 }
 
+
 .page-title
 {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -296,7 +297,8 @@ transition: 1s;
     /* display: inline-block; */
     
     align-content: center;
-    width:350px;
+    /* width:350px; */
+    width: 50%;
     margin: 10;
     padding: 15px;
     /* box-shadow: 15px 15px 25px rgba(0,0,0,0.08); */
@@ -368,6 +370,13 @@ transition: 1s;
 
     
 }
+.chartBox:hover{
+    box-shadow: 15px 15px 25px rgba(108, 45, 107, 0.15);
+    transform: scale(1.05);
+    transition: 0.4s;
+    background-color: rgba(218, 218, 218, 0.514);
+    z-index:2;
+}
 
 .alertBox
 {
@@ -390,6 +399,13 @@ transition: 1s;
     /* border-radius: 10px; */
     border: 0px solid rgba( 255, 255, 255, 0.18 );
 
+}
+.alertBox:hover{
+    box-shadow: 15px 15px 25px rgba(108, 45, 107, 0.15);
+    transform: scale(1.05);
+    transition: 0.4s;
+    background-color: rgba(218, 218, 218, 0.514);
+    z-index:2;
 }
 
 /* .chartCard
