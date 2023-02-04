@@ -68,7 +68,8 @@
     <div class="chartBox">
         <div class="chartCard" style="max-width: 18rem;">
             <div class="cardName">CHARTS</div>
-            <div class="imgbox"><img src="image.jpg"></div>
+            <div class="imgbox" id = "TemperatureChart"><img src="image.jpg"></div>
+            <div class="imgbox" id = "HumidityChart"><img src="image.jpg"></div>
         </div>
     </div>
     <div class="alertBox" >
@@ -86,6 +87,8 @@
                 document.getElementById("tempdata").innerText=data.temp;
                 document.getElementById("humdata").innerText=data.hum;
                 document.getElementById("lightdata").innerText=data.light;
+                document.getElementById("TemperatureChart").innerHTML = "<img src="+data.temp_url.data+">";
+                document.getElementById("HumidityChart").innerHTML = "<img src="+data.hum_url.data+">";
                 }
                 catch(error){
                     console.log(error);
