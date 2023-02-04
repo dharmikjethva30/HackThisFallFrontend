@@ -260,6 +260,13 @@ transition: 1s;
     left:26px;
     gap:10px;
 }
+.card:hover{
+    box-shadow: 15px 15px 25px rgba(245, 122, 14, 0.15);
+    transform: scale(1.05);
+    transition: 0.5s;
+    background-color: rgba(255, 145, 0, 0.789);
+    z-index:2;
+}
 
 .card
 {
