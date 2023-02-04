@@ -8,22 +8,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div>
     <div class="navigation">
         <ul>
             <li>
-                <a href="#">
+                <a href="index.html">
                     <span class="icon"><ion-icon name="laptop-outline"></ion-icon></span>
                     <span class="title">Dashbaord</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="./automation.html">
                     <span class="icon"> <ion-icon name="home-outline"></ion-icon> </span>
                     <span class="title">Home Automation</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="./analytics.html">
                     <span class="icon"> <ion-icon name="analytics-outline"></ion-icon> </span>
                     <span class="title">Sensor data</span>
                 </a>
@@ -37,10 +38,16 @@
         </ul>
         <div class="toggle"></div>
     </div>
+</div>
+
     <script>
         let navigation = document.querySelector('.navigation');
         let toggle = document.querySelector('.toggle');
         toggle.onclick = function(){
+            navigation.classList.toggle('active')
+        }
+        let toggle2 = document.querySelector('.icon')
+        toggle2.onclick = function(){
             navigation.classList.toggle('active')
         }
     </script>
