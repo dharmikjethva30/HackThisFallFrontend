@@ -7,12 +7,14 @@
 body
 {
 min-height: 100vh;
-background: rgb(26, 18, 34);
+/* background: rgb(26, 18, 34); */
+background: #fff;
 }
 
 .navigation
 {
-    position: fixed;
+    /* position: absolute;  */
+    position:fixed;
     inset: 20px;
     background: blueviolet;
     width: 80px;
@@ -20,7 +22,6 @@ background: rgb(26, 18, 34);
     border-radius: 50px;
     overflow: hidden;
     box-shadow: 15px 15px 25px rgba(0,0,0,0.05);
-
 }
 .navigation.active{
     width: 300px;
@@ -51,7 +52,7 @@ height: 3px;
 border-radius: 3px;
 background: blue;
 transform: translateY(-5px);
-transition: 1s;
+transition: 2s;
 }
 
 .toggle::after
@@ -155,4 +156,51 @@ transition: 1s;
     line-height: 60px;
     text-align: start;
     white-space: nowrap;
+}
+
+/* .cardBox
+{
+  position: relative;
+  left:100px;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 300px;
+  z-index: -20;
+}
+.cardBox .card
+{
+  position: absolute;
+  left:100px;
+  background: var(--white);
+  padding: 30px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  z-index: -20; 
+} */
+
+
+.cardBox
+{
+    position:relative;
+    /* left:170px; */
+    width: 100%;
+    text-align: center;
+    top: 30px;
+}
+
+.card
+{
+    position:relative;
+    /* left:360px; */
+    display: inline-block;
+    row-gap: 10px;
+    width:300px;
+    margin: 0 auto;
+    padding: 5px;
+    box-shadow: 15px 15px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    background-color: blueviolet;
+    height: 180px;
+
 }
