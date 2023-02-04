@@ -8,38 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="page-title">Sensor Analytics</div>
     <div>
-    <div class="navigation">
-        <ul>
-            <li>
-                <a href="./index.html">
-                    <span class="icon"><ion-icon name="laptop-outline"></ion-icon></span>
-                    <span class="title">Dashbaord</span>
-                </a>
-            </li>
-            <li>
-                <a href="./automation.html">
-                    <span class="icon"> <ion-icon name="home-outline"></ion-icon> </span>
-                    <span class="title">Home Automation</span>
-                </a>
-            </li>
-            <li>
-                <a href="./analytics.html">
-                    <span class="icon"> <ion-icon name="analytics-outline"></ion-icon> </span>
-                    <span class="title">Sensor data</span>
-                </a>
-            </li>
-            <!-- <li>
-                <a href="#">
-                    <span class="icon"></span>
-                    <span class="title">XYZ</span>
-                </a>
-            </li> -->
-        </ul>
-        <div class="toggle"></div>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <span class="icon"><ion-icon name="laptop-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./automation.html">
+                        <span class="icon"> <ion-icon name="home-outline"></ion-icon> </span>
+                        <span class="title">Home Automation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./analytics.html">
+                        <span class="icon"> <ion-icon name="analytics-outline"></ion-icon> </span>
+                        <span class="title">Sensor data</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- <div class="toggle"></div> -->
+        </div>
     </div>
-</div>
     <div class="cardBox">
         <div class="card" style="max-width: 18rem;">
             <div class="iconBox">
@@ -55,7 +49,7 @@
             <ion-icon name="thermometer-outline"></ion-icon>
             </div>
         <div class="data">1010</div>
-        <div class="cardName">Temperature</div>
+        <div class="cardName">Humidity</div>
     </div>
     
 
@@ -64,27 +58,81 @@
             <ion-icon name="thermometer-outline"></ion-icon>
             </div>
         <div class="data">1010</div>
-        <div class="cardName">Temperature</div>
+        <div class="cardName">Gas Leakage</div>
     </div>
-    
-</div>
-
+    </div>
+    <div class="chartBox">
+        <div class="chartCard" style="max-width: 18rem;">
+            <div class="cardName">CHARTS</div>
+        </div>
+    </div>
+  <!-- <div class="card" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Secondary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Success card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> -->
      
 
-</div>
- 
-    <script>
-        let navigation = document.querySelector('.navigation');
-        let toggle = document.querySelector('.toggle');
-        toggle.onclick = function(){
-            navigation.classList.toggle('active')
-        }
-        let toggle2 = document.querySelector('.icon')
-        toggle2.onclick = function(){
-            navigation.classList.toggle('active')
-        }
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- <div class="cardbox">
+        <div class="card">
+        <div>
+            <div class="data">1010</div>
+            <div class="cardName">Temperature</div>
+        </div>
+        <div class="iconBox">
+        <ion-icon name="thermometer-outline"></ion-icon>
+        </div>
+        </div>
+        <div class="card">
+        <div>
+            <div class="data">1010</div>
+            <div class="cardName">Temperature</div>
+        </div>
+        <div class="iconBox">
+        <ion-icon name="thermometer-outline"></ion-icon>
+        </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="data">1010</div>
+                <div class="cardName">Temperature</div>
+            </div>
+            <div class="iconBox">
+            <ion-icon name="thermometer-outline"></ion-icon>
+            </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="data">1010</div>
+                    <div class="cardName">Temperature</div>
+                </div>
+                <div class="iconBox">
+                <ion-icon name="thermometer-outline"></ion-icon>
+                </div>
+                </div> -->
+  
+        <!-- <script>
+            let navigation = document.querySelector('.navigation');
+            let toggle = document.querySelector('.toggle');
+            toggle.onclick = function(){
+                navigation.classList.toggle('active')
+            }
+            let toggle2 = document.querySelector('.icon')
+            toggle2.onclick = function(){
+                navigation.classList.toggle('active')
+            }
+        </script> -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
